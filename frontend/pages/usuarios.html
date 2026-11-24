@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Gestión administrativa de usuarios de PHISHING AI.">
+
+    <title>Gestión de usuarios | PHISHING AI</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/user-management.css">
+</head>
+
+<body>
+
+<div class="admin-page">
+
+    <aside class="admin-sidebar">
+
+        <a href="../index.html" class="admin-brand">
+            <span class="brand-icon">P</span>
+            <span>PHISHING AI</span>
+        </a>
+
+        <div class="sidebar-profile">
+            <div class="profile-avatar">A</div>
+            <div>
+                <strong>Administrador</strong>
+                <span>Panel de control</span>
+            </div>
+        </div>
+
+        <nav class="admin-nav">
+
+            <span class="nav-section">GENERAL</span>
+
+            <a href="admin.html" class="nav-link">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="usuarios.html" class="nav-link active">
+                <span>♙</span>
+                Usuarios
+            </a>
+
+            <span class="nav-section">SEGURIDAD</span>
+
+            <a href="admin.html#analisis" class="nav-link">
+                <span>⌕</span>
+                Análisis
+            </a>
+
+            <a href="threat-intelligence.html" class="nav-link">
+                <span>◈</span>
+                Inteligencia de amenazas
+            </a>
+
+            <a href="admin.html#informes" class="nav-link">
+                <span>▤</span>
+                Informes
+            </a>
+
+            <a href="admin.html#alertas" class="nav-link">
+                <span>♧</span>
+                Alertas
+            </a>
+
+            <span class="nav-section">CONFIGURACIÓN</span>
+
+            <a href="admin.html#api" class="nav-link">
+                <span>⌘</span>
+                API para clientes
+            </a>
+
+            <a href="admin.html#motor" class="nav-link">
+                <span>⚙</span>
+                Motor de detección
+            </a>
+
+        </nav>
+
+        <a href="../index.html" class="admin-back">
+            ← Volver a PHISHING AI
+        </a>
+
+    </aside>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div>
+                <span class="breadcrumb">Administración / Usuarios</span>
+                <h1>Gestión de usuarios</h1>
+            </div>
+
+            <button id="logoutAdmin" class="logout-button">
+                Cerrar sesión
+            </button>
+        </header>
+
+        <section class="user-welcome">
+            <div>
+                <span class="section-eyebrow">ADMINISTRACIÓN</span>
+                <h2>Control de usuarios</h2>
+                <p>
+                    Consulta, organiza y administra las cuentas registradas
+                    en la plataforma PHISHING AI.
+                </p>
+            </div>
+        </section>
+
+        <section class="user-statistics">
+
+            <article class="user-stat-card">
+                <span>Total de usuarios</span>
+                <strong id="totalUsers">0</strong>
+                <small>Usuarios registrados</small>
+            </article>
+
+            <article class="user-stat-card">
+                <span>Usuarios activos</span>
+                <strong id="activeUsers">0</strong>
+                <small>En los resultados consultados</small>
+            </article>
+
+            <article class="user-stat-card">
+                <span>Usuarios inactivos</span>
+                <strong id="inactiveUsers">0</strong>
+                <small>En los resultados consultados</small>
+            </article>
+
+        </section>
+
+        <section class="user-management-panel">
+
+            <div class="user-panel-heading">
+                <div>
+                    <h2>Directorio de usuarios</h2>
+                    <p>Consulta y administra las cuentas registradas.</p>
+                </div>
+            </div>
+
+            <div class="user-filters">
+
+                <input
+                    type="search"
+                    id="searchUsers"
+                    placeholder="Buscar por nombre o correo..."
+                    maxlength="150"
+                >
+
+                <select id="filterRole">
+                    <option value="">Todos los roles</option>
+                    <option value="USER">Usuario</option>
+                    <option value="ADMIN">Administrador</option>
+                </select>
+
+                <select id="filterStatus">
+                    <option value="">Todos los estados</option>
+                    <option value="1">Activos</option>
+                    <option value="0">Inactivos</option>
+                </select>
+
+                <button id="searchButton" type="button">
+                    Buscar
+                </button>
+
+                <button id="clearFilters" type="button">
+                    Limpiar
+                </button>
+
+            </div>
+
+            <p id="userMessage" class="user-message" role="status"></p>
+
+            <div class="user-table-container">
+
+                <table class="user-table">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre completo</th>
+                            <th>Correo electrónico</th>
+                            <th>Rol</th>
+                            <th>Estado</th>
+                            <th>Fecha de registro</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="usersTableBody">
+                        <tr>
+                            <td colspan="7">Cargando usuarios...</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <div class="user-pagination">
+
+                <span id="paginationInfo">
+                    Página 1 de 1
+                </span>
+
+                <div>
+                    <button id="previousPage" type="button" disabled>
+                        Anterior
+                    </button>
+
+                    <button id="nextPage" type="button" disabled>
+                        Siguiente
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer class="admin-footer">
+            PHISHING AI © 2026 - Administración y seguridad.
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../js/user-management.js"></script>
+
+</body>
+</html>

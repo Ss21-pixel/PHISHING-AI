@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Panel administrativo de PHISHING AI">
+    <title>Administración | PHISHING AI</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="admin-page">
+
+    <aside class="admin-sidebar">
+        <a href="../index.html" class="admin-brand">
+            <span class="brand-icon">P</span>
+            <span>PHISHING <strong>AI</strong></span>
+        </a>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <div>
+                <strong>Administrador</strong>
+                <span>Panel de control</span>
+            </div>
+        </div>
+
+        <nav class="admin-nav">
+            <span class="nav-heading">PRINCIPAL</span>
+            <a href="admin.html" class="active">▦ Dashboard</a>
+
+            <span class="nav-heading">GESTIÓN</span>
+            <a href="#usuarios">♙ Usuarios</a>
+            <a href="#analisis">⌕ Análisis</a>
+            <a href="#amenazas">⚠ Inteligencia de amenazas</a>
+
+            <span class="nav-heading">SEGURIDAD</span>
+            <a href="#informes">▤ Informes</a>
+            <a href="#alertas">♧ Alertas</a>
+            <a href="#api">⌘ API para clientes</a>
+            <a href="#motor">⚙ Motor de detección</a>
+        </nav>
+
+        <a href="../index.html" class="admin-back">← Volver a PHISHING AI</a>
+    </aside>
+
+    <main class="admin-main">
+
+        <header class="admin-topbar">
+            <div>
+                <span class="admin-eyebrow">CENTRO DE CONTROL</span>
+                <h1>Panel de administración</h1>
+                <p>Supervisa la actividad y seguridad de la plataforma.</p>
+            </div>
+
+            <button id="logoutAdmin" class="admin-logout">
+                Cerrar sesión
+            </button>
+        </header>
+
+        <section class="admin-welcome">
+            <div>
+                <span>PHISHING AI / ADMINISTRACIÓN</span>
+                <h2>Bienvenido al centro de seguridad</h2>
+                <p>Resumen general del funcionamiento de la plataforma.</p>
+            </div>
+            <div class="admin-shield">
+                <img 
+                    src="../assets/images/logo-phishing-ai.jpg"
+                    alt="Logo oficial de PHISHING AI"
+                    class="admin-logo"
+                >
+            </div>
+        </section>
+
+        <section class="admin-stats" id="statsContainer">
+
+            <article class="stat-card">
+                <span>Usuarios registrados</span>
+                <strong id="totalUsers">—</strong>
+                <small>Usuarios de la plataforma</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Usuarios activos</span>
+                <strong id="activeUsers">—</strong>
+                <small>Cuentas habilitadas</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Análisis realizados</span>
+                <strong id="totalAnalyses">—</strong>
+                <small>Total de evaluaciones</small>
+            </article>
+
+            <article class="stat-card stat-danger">
+                <span>Análisis de alto riesgo</span>
+                <strong id="highRiskAnalyses">—</strong>
+                <small>Riesgos altos y críticos</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Amenazas registradas</span>
+                <strong id="totalThreats">—</strong>
+                <small>Indicadores detectados</small>
+            </article>
+
+        </section>
+
+        <section class="admin-panel" id="analisis">
+            <div class="panel-heading">
+                <div>
+                    <h2>Actividad reciente</h2>
+                    <p>Últimos análisis registrados en PHISHING AI.</p>
+                </div>
+                <span class="live-indicator">● Datos del servidor</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Usuario</th>
+                            <th>Correo</th>
+                            <th>Tipo</th>
+                            <th>Riesgo</th>
+                            <th>Puntuación</th>
+                            <th>Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recentAnalyses">
+                        <tr>
+                            <td colspan="6">Cargando información...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div id="adminMessage" class="admin-message" role="status"></div>
+
+        <footer class="admin-footer">
+            PHISHING AI © 2026 · Centro de administración y seguridad
+        </footer>
+
+    </main>
+
+    <script src="../js/admin.js"></script>
+
+</body>
+</html>

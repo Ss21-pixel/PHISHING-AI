@@ -1,0 +1,25 @@
+# Dependencias
+**/node_modules/
+
+# Variables y credenciales
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+**/.vite/
+npm-debug.log*
+.DS_Store
+
+# Cobertura de pruebas
+coverage/
+
+# Archivos del sistema
+Thumbs.db
+
+# Copias de respaldo que se conservan localmente
+**/*.backup
+**/backup_pre_modulos_*/
+
+# Otros archivos de respaldo
+**/*.backup.*

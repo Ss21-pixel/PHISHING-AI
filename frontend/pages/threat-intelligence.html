@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de inteligencia de amenazas de PHISHING AI">
+    <title>Inteligencia de amenazas | PHISHING AI</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/threat-intelligence.css">
+</head>
+
+<body class="admin-page">
+
+    <aside class="admin-sidebar">
+        <a href="../index.html" class="admin-brand">
+            <span class="brand-icon">P</span>
+            <span>PHISHING <strong>AI</strong></span>
+        </a>
+
+        <div class="admin-profile">
+            <div class="admin-avatar">A</div>
+            <div>
+                <strong>Administrador</strong>
+                <span>Centro de seguridad</span>
+            </div>
+        </div>
+
+        <nav class="admin-nav">
+            <span class="nav-heading">PRINCIPAL</span>
+            <a href="admin.html">Dashboard</a>
+
+            <span class="nav-heading">GESTIÓN</span>
+            <a href="admin.html#usuarios">Usuarios</a>
+            <a href="admin.html#analisis">Análisis</a>
+            <a href="threat-intelligence.html" class="active">
+                Inteligencia de amenazas
+            </a>
+
+            <span class="nav-heading">SEGURIDAD</span>
+            <a href="#informes">Informes</a>
+            <a href="#alertas">Alertas</a>
+            <a href="#api">API para clientes</a>
+            <a href="#motor">Motor de detección</a>
+        </nav>
+
+        <a href="admin.html" class="admin-back">
+            Volver al dashboard
+        </a>
+    </aside>
+
+    <main class="admin-main threat-main">
+
+        <section class="admin-welcome">
+            <div>
+                <span class="welcome-label">CENTRO DE SEGURIDAD</span>
+                <h1>Inteligencia de amenazas</h1>
+                <p>
+                    Consulta, clasifica y supervisa los indicadores
+                    de amenazas detectados por PHISHING AI.
+                </p>
+            </div>
+        </section>
+
+        <section class="threat-summary">
+
+            <article class="threat-summary-card">
+                <span>Total de amenazas</span>
+                <strong id="threatTotal">0</strong>
+                <small>Indicadores registrados</small>
+            </article>
+
+            <article class="threat-summary-card">
+                <span>Críticas</span>
+                <strong id="threatCritical">0</strong>
+                <small>Gravedad crítica</small>
+            </article>
+
+            <article class="threat-summary-card">
+                <span>Altas</span>
+                <strong id="threatHigh">0</strong>
+                <small>Gravedad alta</small>
+            </article>
+
+            <article class="threat-summary-card">
+                <span>Medias y bajas</span>
+                <strong id="threatOther">0</strong>
+                <small>Otros niveles de riesgo</small>
+            </article>
+
+        </section>
+
+        <section class="threat-panel">
+
+            <div class="threat-panel-heading">
+                <div>
+                    <h2>Registro de indicadores</h2>
+                    <p>Busca y filtra las amenazas almacenadas en el sistema.</p>
+                </div>
+
+                <button type="button" id="refreshThreats" class="threat-refresh">
+                    Actualizar
+                </button>
+            </div>
+
+            <div class="threat-filters">
+
+                <div class="threat-filter-field">
+                    <label for="threatSearch">Buscar indicador</label>
+                    <input
+                        type="search"
+                        id="threatSearch"
+                        placeholder="URL, dominio o descripción..."
+                    >
+                </div>
+
+                <div class="threat-filter-field">
+                    <label for="severityFilter">Gravedad</label>
+                    <select id="severityFilter">
+                        <option value="">Todas</option>
+                        <option value="CRITICAL">Crítica</option>
+                        <option value="HIGH">Alta</option>
+                        <option value="MEDIUM">Media</option>
+                        <option value="LOW">Baja</option>
+                    </select>
+                </div>
+
+                <div class="threat-filter-field">
+                    <label for="typeFilter">Tipo de amenaza</label>
+                    <input
+                        type="text"
+                        id="typeFilter"
+                        placeholder="Ej. URL sospechosa"
+                    >
+                </div>
+
+                <button type="button" id="applyFilters" class="threat-filter-button">
+                    Filtrar
+                </button>
+
+            </div>
+
+            <div id="threatMessage" class="threat-message" role="status">
+                Cargando indicadores...
+            </div>
+
+            <div class="threat-table-wrapper">
+                <table class="threat-table">
+                    <thead>
+                        <tr>
+                            <th>Indicador</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Gravedad</th>
+                            <th>Fecha de registro</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="threatTableBody">
+                        <tr>
+                            <td colspan="5">Cargando amenazas...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="threat-pagination">
+                <span id="threatPaginationInfo">Página 1</span>
+
+                <div>
+                    <button type="button" id="previousPage" disabled>
+                        Anterior
+                    </button>
+
+                    <button type="button" id="nextPage" disabled>
+                        Siguiente
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="admin-footer">
+            PHISHING AI © 2026 · Centro de inteligencia de amenazas
+        </footer>
+
+    </main>
+
+    <script src="../js/threat-intelligence.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,412 @@
+/* =========================================
+   PHISHING AI - AUTENTICACIÓN
+   ========================================= */
+
+   .auth-page {
+    min-height: 100vh;
+    margin: 0;
+    background: #071827;
+    color: #FFFFFF;
+}
+
+.auth-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* PANEL IZQUIERDO */
+
+.auth-brand {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 55px 9%;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 75%, rgba(22, 119, 210, .22), transparent 40%),
+        linear-gradient(145deg, #102A43, #071827);
+}
+
+.auth-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.auth-logo strong {
+    color: #20B8A6;
+}
+
+.logo-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #1677D2;
+    color: #FFFFFF;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.auth-brand-content {
+    max-width: 540px;
+    position: relative;
+    z-index: 1;
+}
+
+.auth-eyebrow {
+    display: inline-block;
+    color: #20B8A6;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.auth-brand-content h1 {
+    margin: 22px 0;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+}
+
+.auth-brand-content > p {
+    max-width: 440px;
+    color: #A9BDCE;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.auth-security {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    max-width: 440px;
+    margin-top: 45px;
+    padding: 20px;
+    border: 1px solid rgba(243, 246, 250, .12);
+    border-radius: 14px;
+    background: rgba(16, 42, 67, .65);
+}
+
+.security-symbol {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: rgba(32, 184, 166, .13);
+    color: #20B8A6;
+    font-size: 27px;
+}
+
+.auth-security div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.auth-security strong {
+    font-size: 14px;
+}
+
+.auth-security div span {
+    color: #A9BDCE;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.auth-brand-footer {
+    color: #71899D;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* PANEL DERECHO */
+
+.auth-form-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 8%;
+    background: #071827;
+}
+
+.auth-form-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.auth-back {
+    display: inline-block;
+    margin-bottom: 48px;
+    color: #A9BDCE;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.auth-back:hover {
+    color: #20B8A6;
+}
+
+.auth-heading {
+    margin-bottom: 32px;
+}
+
+.auth-heading h2 {
+    margin: 13px 0 8px;
+    color: #FFFFFF;
+    font-size: 34px;
+    letter-spacing: -.7px;
+}
+
+.auth-heading p {
+    margin: 0;
+    color: #A9BDCE;
+    font-size: 14px;
+}
+
+/* FORMULARIO */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.form-group label {
+    color: #F3F6FA;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 49px;
+    padding: 0 15px;
+    border: 1px solid rgba(169, 189, 206, .2);
+    border-radius: 9px;
+    outline: none;
+    background: #102A43;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.form-group input::placeholder {
+    color: #71899D;
+}
+
+.form-group input:focus {
+    border-color: #1677D2;
+    box-shadow: 0 0 0 3px rgba(22, 119, 210, .15);
+}
+/* Selector del tipo de cuenta */
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 49px;
+    padding: 0 15px;
+    border: 1px solid rgba(169, 189, 206, 0.2);
+    border-radius: 9px;
+    outline: none;
+    background: #102A43;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #1677D2;
+    box-shadow: 0 0 0 3px rgba(22, 119, 210, 0.15);
+}
+
+.form-group select option {
+    background: #102A43;
+    color: #FFFFFF;
+}
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 85px;
+}
+
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: #20B8A6;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.auth-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #A9BDCE;
+    font-size: 12px;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.auth-checkbox input {
+    margin-top: 3px;
+    accent-color: #20B8A6;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.auth-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 53px;
+    padding: 0 19px;
+    border: none;
+    border-radius: 9px;
+    background: #1677D2;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+
+.auth-submit:hover {
+    background: #1265B4;
+    transform: translateY(-2px);
+}
+
+.auth-submit:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auth-submit span {
+    font-size: 21px;
+}
+
+/* MENSAJES */
+
+.auth-message {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border: 1px solid rgba(32, 184, 166, .3);
+    border-radius: 9px;
+    background: rgba(32, 184, 166, .09);
+    color: #20B8A6;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.auth-message.error {
+    border-color: rgba(255, 100, 100, .35);
+    background: rgba(255, 80, 80, .08);
+    color: #FF9292;
+}
+
+/* ENLACES Y PIE */
+
+.auth-switch {
+    margin-top: 27px;
+    color: #A9BDCE;
+    font-size: 13px;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: #20B8A6;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}
+
+.auth-legal {
+    margin-top: 38px;
+    color: #71899D;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .auth-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-brand {
+        min-height: 330px;
+        padding: 35px 8%;
+    }
+
+    .auth-brand-content {
+        margin: 55px 0 35px;
+    }
+
+    .auth-brand-content h1 {
+        font-size: 38px;
+    }
+
+    .auth-security {
+        margin-top: 25px;
+    }
+
+    .auth-brand-footer {
+        display: none;
+    }
+
+    .auth-form-section {
+        padding: 50px 8%;
+    }
+
+    .auth-back {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-brand-content h1 {
+        font-size: 32px;
+    }
+
+    .auth-heading h2 {
+        font-size: 29px;
+    }
+
+    .auth-form-section {
+        padding: 40px 6%;
+    }
+}

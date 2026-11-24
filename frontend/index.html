@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102A43">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+    <meta name="description" content="PHISHING AI: plataforma inteligente para detectar posibles amenazas de phishing.">
+
+    <title>PHISHING AI | Protección Inteligente</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header class="navbar">
+
+        <a href="index.html" class="brand">
+            <span>PHISHING <strong>AI</strong></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#analisis">Analizar</a>
+            <a href="pages/historial.html">Historial</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="pages/login.html" id="loginLink" class="btn-login">
+                Iniciar sesión
+            </a>
+
+            <a href="pages/registro.html" id="registerLink" class="btn-register">
+                Registrarse
+            </a>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="btn-login"
+                hidden
+            >
+                Cerrar sesión
+            </button>
+
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <span class="eyebrow">
+                    ● CIBERSEGURIDAD INTELIGENTE
+                </span>
+
+                <h1>
+                    Detecta amenazas antes de que sea
+                    <span>demasiado tarde.</span>
+                </h1>
+
+                <p>
+                    Protege tu información digital con PHISHING AI.
+                    Analiza enlaces y mensajes para identificar posibles
+                    amenazas de phishing de forma rápida y sencilla.
+                </p>
+
+                <a href="#analisis" class="btn-primary">
+                    Comenzar análisis →
+                </a>
+
+                <div class="hero-stats">
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Protección digital</span>
+                    </div>
+
+                    <div>
+                        <strong>IA</strong>
+                        <span>Análisis inteligente</span>
+                    </div>
+
+                    <div>
+                        <strong>360°</strong>
+                        <span>Seguridad digital</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="security-card">
+
+                    <div class="security-header">
+                        <span class="status-dot"></span>
+                        SISTEMA DE SEGURIDAD
+                        <span class="live">EN LÍNEA</span>
+                    </div>
+
+                    <img
+                    src="assets/images/logo-phishing-ai.jpg"
+                    alt="Logo PHISHING AI"
+                    class="hero-logo"
+                    style="width: 200px !important; height: 200px !important; max-width: 200px; object-fit: contain; display: block; margin: 15px auto 8px;">
+                    <h2>Tu seguridad importa</h2>
+
+                    <p>
+                        Analiza contenido sospechoso y conoce
+                        sus posibles indicadores de riesgo.
+                    </p>
+
+                    <div class="security-footer">
+                        <span>PHISHING AI</span>
+                        <span>● Sistema activo</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ÁREA DE ANÁLISIS -->
+        <section class="analysis-section" id="analisis">
+
+            <div class="section-heading">
+                <span class="eyebrow">ANÁLISIS DE AMENAZAS</span>
+                <h2>Analiza antes de hacer clic</h2>
+                <p>
+                    Introduce un enlace o mensaje para evaluar
+                    sus posibles indicadores de phishing.
+                </p>
+            </div>
+
+            <div class="analysis-card">
+
+                <div class="analysis-tabs">
+                    <button class="tab active" data-type="URL">
+                        🔗 Analizar enlace
+                    </button>
+
+                    <button class="tab" data-type="MESSAGE">
+                        ✉ Analizar mensaje
+                    </button>
+                </div>
+
+                <form id="analysisForm">
+
+                    <label for="contentInput">
+                        Contenido que deseas analizar
+                    </label>
+
+                    <textarea
+                        id="contentInput"
+                        placeholder="Pega aquí un enlace sospechoso..."
+                        minlength="5"
+                        maxlength="10000"
+                        required
+                    ></textarea>
+
+                    <div class="input-footer">
+                        <span id="inputHint">
+                            Introduce una dirección web HTTP o HTTPS.
+                        </span>
+
+                        <span id="characterCount">0 / 10000</span>
+                    </div>
+
+                    <button type="submit" id="analyzeButton" class="btn-analyze">
+                        Analizar contenido →
+                    </button>
+
+                </form>
+
+                <div id="analysisMessage" class="analysis-message" hidden></div>
+
+                <div id="analysisResult" class="result-card" hidden>
+                    <h3>Resultado del análisis</h3>
+                    <p id="resultLevel"></p>
+                    <p id="resultScore"></p>
+                    <p id="resultDescription"></p>
+                    <ul id="threatList"></ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN -->
+        <section class="features-section">
+
+            <div class="section-heading">
+                <span class="eyebrow">PROTECCIÓN DIGITAL</span>
+                <h2>Seguridad en cada decisión</h2>
+            </div>
+
+            <div class="features-grid">
+
+                <article class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>Análisis de enlaces</h3>
+                    <p>
+                        Examina direcciones web para identificar
+                        características sospechosas.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">✉️</span>
+                    <h3>Análisis de mensajes</h3>
+                    <p>
+                        Identifica señales de engaño, urgencia
+                        y solicitudes sospechosas.
+                    </p>
+                </article>
+
+                <article class="feature-card">
+                    <span class="feature-icon">📊</span>
+                    <h3>Historial de análisis</h3>
+                    <p>
+                        Consulta los resultados de tus análisis
+                        y revisa las amenazas detectadas.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+
+        <a href="index.html" class="brand">
+            <span>PHISHING <strong>AI</strong></span>
+        </a>
+
+        <p>
+            © 2026 PHISHING AI.
+            Protección inteligente contra el phishing.
+        </p>
+
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("./service-worker.js")
+                    .then((registration) => {
+                        console.log(
+                            "PHISHING AI: Service Worker registrado",
+                            registration.scope
+                        );
+                    })
+                    .catch((error) => {
+                        console.error(
+                            "Error al registrar Service Worker:",
+                            error
+                        );
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

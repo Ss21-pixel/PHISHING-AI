@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Historial de análisis de seguridad de PHISHING AI">
+    <title>Historial | PHISHING AI</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/history.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">P</span>
+                <span>PHISHING <strong>AI</strong></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="historial.html" class="active">Historial</a>
+                <a href="login.html" id="loginLink">Iniciar sesión</a>
+                <a href="registro.html" id="registerLink">Crear cuenta</a>
+                <button type="button" id="logoutButton" class="logout-button" hidden>
+                    Cerrar sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="history-page">
+        <section class="history-header">
+            <div>
+                <span class="section-tag">CENTRO DE SEGURIDAD</span>
+                <h1>Historial de análisis</h1>
+                <p>Consulta los resultados y niveles de riesgo de tus análisis anteriores.</p>
+            </div>
+
+            <a href="../index.html" class="new-analysis-button">
+                + Nuevo análisis
+            </a>
+        </section>
+
+        <section class="history-stats">
+            <article class="history-stat">
+                <span>Total de análisis</span>
+                <strong id="totalAnalyses">0</strong>
+            </article>
+
+            <article class="history-stat">
+                <span>Riesgos críticos</span>
+                <strong id="criticalAnalyses">0</strong>
+            </article>
+
+            <article class="history-stat">
+                <span>Riesgos altos</span>
+                <strong id="highAnalyses">0</strong>
+            </article>
+        </section>
+
+        <section class="history-panel">
+            <div class="history-panel-header">
+                <div>
+                    <h2>Actividad reciente</h2>
+                    <p>Resultados almacenados en tu cuenta.</p>
+                </div>
+
+                <button type="button" id="refreshButton" class="refresh-button">
+                    Actualizar
+                </button>
+            </div>
+
+            <div id="historyMessage" class="history-message" role="status">
+                Cargando historial...
+            </div>
+
+            <div class="table-wrapper">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Contenido</th>
+                            <th>Nivel de riesgo</th>
+                            <th>Puntuación</th>
+                            <th>Fecha</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="historyTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 PHISHING AI. Protección inteligente contra amenazas digitales.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/history.js"></script>
+</body>
+</html>

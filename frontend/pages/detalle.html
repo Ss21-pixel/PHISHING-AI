@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalle de análisis de seguridad de PHISHING AI">
+    <title>Detalle del análisis | PHISHING AI</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/history.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container navbar-content">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">P</span>
+                <span>PHISHING <strong>AI</strong></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="../index.html">Inicio</a>
+                <a href="historial.html">Historial</a>
+                <a href="login.html" id="loginLink">Iniciar sesión</a>
+                <a href="registro.html" id="registerLink">Crear cuenta</a>
+                <button type="button" id="logoutButton" class="logout-button" hidden>
+                    Cerrar sesión
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="detail-page">
+
+        <a href="historial.html" class="back-link">
+            ← Volver al historial
+        </a>
+
+        <section class="detail-header">
+            <span class="section-tag">INFORMACIÓN DE SEGURIDAD</span>
+            <h1>Detalle del análisis</h1>
+            <p>Consulta la información completa del análisis y las amenazas identificadas.</p>
+        </section>
+
+        <div id="detailMessage" class="history-message">
+            Cargando información del análisis...
+        </div>
+
+        <section id="analysisDetails" hidden>
+
+            <article class="detail-risk-card">
+                <div>
+                    <span class="detail-label">NIVEL DE RIESGO</span>
+                    <h2 id="riskLevel">--</h2>
+                    <p id="riskDescription">Resultado del análisis de seguridad</p>
+                </div>
+
+                <div class="risk-score">
+                    <strong id="riskScore">0</strong>
+                    <span>/ 100</span>
+                </div>
+            </article>
+
+            <section class="detail-information">
+                <h2>Información general</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span>Identificador</span>
+                        <strong id="analysisId">--</strong>
+                    </div>
+
+                    <div class="detail-item">
+                        <span>Tipo de análisis</span>
+                        <strong id="analysisType">--</strong>
+                    </div>
+
+                    <div class="detail-item">
+                        <span>Estado</span>
+                        <strong id="analysisStatus">--</strong>
+                    </div>
+
+                    <div class="detail-item">
+                        <span>Fecha de creación</span>
+                        <strong id="analysisDate">--</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detail-information">
+                <h2>Contenido analizado</h2>
+                <pre id="originalContent" class="original-content"></pre>
+            </section>
+
+            <section class="detail-information">
+                <h2>Resumen del resultado</h2>
+                <p id="resultSummary" class="result-summary"></p>
+            </section>
+
+            <section class="detail-information">
+                <div class="threats-heading">
+                    <div>
+                        <h2>Amenazas detectadas</h2>
+                        <p>Indicadores identificados durante el análisis.</p>
+                    </div>
+
+                    <span id="threatCount" class="threat-count">0 amenazas</span>
+                </div>
+
+                <div id="threatsList" class="threats-list"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 PHISHING AI. Protección inteligente contra amenazas digitales.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
+</html>

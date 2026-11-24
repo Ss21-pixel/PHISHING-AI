@@ -1,0 +1,235 @@
+.detail-page {
+    width: min(1100px, 92%);
+    margin: 45px auto 80px;
+    min-height: 65vh;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #20B8A6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back-link:hover {
+    color: #FFFFFF;
+}
+
+.detail-header {
+    margin-bottom: 30px;
+}
+
+.detail-header h1 {
+    margin: 12px 0;
+    color: #FFFFFF;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.detail-header p {
+    color: #A9BDCE;
+    line-height: 1.6;
+}
+
+.detail-risk-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(169, 189, 206, 0.15);
+    border-radius: 16px;
+    background: linear-gradient(135deg, #102A43, #0B2033);
+}
+
+.detail-label {
+    color: #A9BDCE;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.detail-risk-card h2 {
+    margin: 12px 0 8px;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.detail-risk-card p {
+    margin: 0;
+    color: #A9BDCE;
+    font-size: 14px;
+}
+
+.risk-score {
+    display: flex;
+    align-items: baseline;
+    white-space: nowrap;
+}
+
+.risk-score strong {
+    color: #20B8A6;
+    font-size: 55px;
+}
+
+.risk-score span {
+    color: #A9BDCE;
+    font-size: 18px;
+}
+
+.detail-information {
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(169, 189, 206, 0.13);
+    border-radius: 14px;
+    background: #102A43;
+}
+
+.detail-information h2 {
+    margin: 0 0 22px;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.detail-item span {
+    color: #A9BDCE;
+    font-size: 13px;
+}
+
+.detail-item strong {
+    color: #FFFFFF;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.original-content {
+    padding: 20px;
+    border: 1px solid rgba(169, 189, 206, 0.12);
+    border-radius: 10px;
+    background: #071827;
+    color: #F3F6FA;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.result-summary {
+    color: #A9BDCE;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.threats-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.threats-heading h2 {
+    margin-bottom: 8px;
+}
+
+.threats-heading p {
+    margin: 0;
+    color: #A9BDCE;
+    font-size: 13px;
+}
+
+.threat-count {
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(22, 119, 210, 0.15);
+    color: #65B3FF;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.threats-list {
+    display: grid;
+    gap: 15px;
+}
+
+.threat-card {
+    padding: 20px;
+    border: 1px solid rgba(255, 119, 119, 0.18);
+    border-left: 4px solid #FF7777;
+    border-radius: 10px;
+    background: #0B2033;
+}
+
+.threat-card h3 {
+    margin: 0 0 10px;
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.threat-card p {
+    margin: 7px 0;
+    color: #A9BDCE;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.threat-indicator {
+    display: block;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #071827;
+    color: #20B8A6;
+    font-family: Consolas, monospace;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.no-threats {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(32, 184, 166, 0.08);
+    color: #20B8A6;
+    line-height: 1.6;
+}
+
+@media (max-width: 650px) {
+    .detail-risk-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .risk-score strong {
+        font-size: 42px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-information {
+        padding: 18px;
+    }
+
+    .threats-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

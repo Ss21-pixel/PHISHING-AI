@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://phishing-ai-y7s9.onrender.com/api';
 
 const token = localStorage.getItem('phishingAI_token');
 

@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/admin/users';
+const API_URL = 'https://phishing-ai-y7s9.onrender.com/api/admin/users';
 
 // Elementos de la página
 const usersTableBody = document.getElementById('usersTableBody');

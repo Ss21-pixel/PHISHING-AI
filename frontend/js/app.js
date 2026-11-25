@@ -3,7 +3,7 @@
 ========================================= */
 
 // Dirección de nuestra API
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://phishing-ai-y7s9.onrender.com/api";
 
 // Tipo de contenido seleccionado
 let analysisType = "URL";

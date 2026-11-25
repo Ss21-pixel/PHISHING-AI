@@ -1,4 +1,4 @@
-﻿const HISTORY_API_URL = "http://localhost:3000/api";
+const HISTORY_API_URL = "https://phishing-ai-y7s9.onrender.com/api";
 
 const historyTableBody = document.getElementById("historyTableBody");
 const historyMessage = document.getElementById("historyMessage");

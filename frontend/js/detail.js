@@ -1,4 +1,4 @@
-﻿const DETAIL_API_URL = "http://localhost:3000/api";
+const DETAIL_API_URL = "https://phishing-ai-y7s9.onrender.com/api";
 
 const detailMessage = document.getElementById("detailMessage");
 const analysisDetails = document.getElementById("analysisDetails");

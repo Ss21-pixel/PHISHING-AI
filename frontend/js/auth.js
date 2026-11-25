@@ -1,5 +1,5 @@
-﻿
-const AUTH_API_URL = "http://localhost:3000/api";
+
+const AUTH_API_URL = "https://phishing-ai-y7s9.onrender.com/api";
 
 // Formularios
 const loginForm = document.getElementById("loginForm");
